@@ -28,6 +28,21 @@
 
 ---
 
+## [2026-03-16] Canonizamos la especificación y arrancamos scaffolding
+
+**Qué pasó:** El repo tenía dos documentos de especificación con diferencias (tablas, nombres de Edge Functions, auth). Se eligió `CURSOR_PROMPT.md` como fuente canónica para arrancar el desarrollo y evitar duplicaciones.
+**Por qué:** Mantener una única “source of truth” reduce inconsistencias y acelera el MVP.
+**Consecuencia:** Se creó estructura base del monorepo, `packages/shared-types`, migración inicial y Edge Functions de QR alineadas a `CURSOR_PROMPT.md`. Además se agregó `.gitignore` (antes existía como `gitignore`, que Git no interpreta por defecto).
+
+**Archivos afectados:**
+- `.gitignore`
+- `package.json`
+- `packages/shared-types/*`
+- `supabase/migrations/001_initial_schema.sql`
+- `supabase/functions/*`
+- `README.md`
+- `CHANGELOG.md`
+
 ## [2026-03-14] El JWT del QR no se guarda completo en la base de datos
 
 **Qué pasó:** En la tabla `access_tokens` se guarda el `token_hash` (hash del JWT), no el JWT en sí.

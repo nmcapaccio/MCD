@@ -1,0 +1,13 @@
+{
+  "name": "mihistorial",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "echo \"TODO: add lint\"",
+    "typecheck": "echo \"TODO: add typecheck\""
+  }
+}
+
